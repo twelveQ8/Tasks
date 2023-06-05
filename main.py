@@ -6,14 +6,15 @@
 # повернуты вверх одной и той же стороной. Выведите минимальное
 # количество монет, которые нужно перевернуть
 
+counter = int(input("Введите сколько всего у вас будет монеток: "))
 coins = []
-for _ in range(12):
-    number = int(input("Введите количество монеток: ")) # Пользователь вводит 0 и 1.
+for _ in range(counter):
+    number = int(input("Введите сторону монетки, где 1 - решка, 0 - орел: "))
     coins.append(number)
 if coins.count(0) < coins.count(1):
     print(coins.count(0))
 else:
-    print("Различных элементов: ",coins.count(1))
+    print("Различных элементов: ", coins.count(1))
 
 
 
